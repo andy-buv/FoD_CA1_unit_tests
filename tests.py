@@ -124,7 +124,8 @@ assert np.around(adjusted_df.min().min(), 3) == 1.00, "Minimum value across all 
 
 # Question 3.5
 
-smooth_df = smooth_ratio(fund_data, 'NASDAQ100', 'DJIA')
+smooth_df = smooth_ratio(fund_data, 'NASDAQ100','DJIA', window = 3, std = 1)
+assert smooth_df.iloc[-2] == 0.4072136424684598, "Wrong smoothed value, should be 0.4072136424684598"
 assert smooth_df.iloc[-2] == 2.469826635724209, "Wrong smoothed value, should be 2.469826635724209"
 
 # Question 3.6
