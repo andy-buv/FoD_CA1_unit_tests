@@ -31,7 +31,7 @@ k1 = find_k_most_similar(df, 3234761827, 1)
 assert k1.index.item() == 3234761827, "Wrong instance returned for k=1 (expected same entry as query)"
 
 k2 = find_k_most_similar(df, 3234780649, 3)
-assert (similar_df.index.values == 3234893368).any(), "Exact matching row not found"
+assert (k2.index.values == 3234893368).any(), "Exact matching row not found"
 
 ###### N.B: returned subset and order of k_rows possibly depend on tie-break implementation???  
 k3 = find_k_most_similar(df, 3234761827, 5)
