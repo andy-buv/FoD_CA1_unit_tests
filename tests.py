@@ -77,12 +77,12 @@ assert np.array_equal(n2, [[2, 0, 1],[5, 3, 4],[8, 6, 7]]), "Incorrect neighbour
 
 # Question 2.4 - check visually against glider example
 
-X = np.array([[0, 0, 0, 0], [1, 0, 0, 0], [0, 1, 1, 0], [1, 1, 0, 0], [0, 0, 0, 0]])
+X = np.array([[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 1, 1, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
 
-# Question 2.5 - NEEDS UPDATING
+# Question 2.5 - check against q2_5.png
 
-# X_test = np.array([[0, 0, 1, 1, 0],[0, 0, 0, 0, 0],[0, 1, 1, 1, 0],[0, 0, 0, 1, 1],[0, 0, 0, 0, 0]])
-# X=conway_game(X_test, 15)
+X_test = np.array([[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 1, 1, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
+X=conway_game(X_test, 9)
 
 ### PART 3
 
