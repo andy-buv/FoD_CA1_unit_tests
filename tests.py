@@ -75,14 +75,26 @@ assert np.array_equal(n1, [[0, 1, 2],[3, 4, 5],[6, 7, 8]]), "Incorrect neighbour
 n2 = extract(X, 1, 0, s=1)
 assert np.array_equal(n2, [[2, 0, 1],[5, 3, 4],[8, 6, 7]]), "Incorrect neighbourhood - check left-right wrap"
 
+try:
+    n3 = extract(X, 0, 1, s=1)
+    print('This test should have thrown an error - sub-array does not fit with top border.')
+except:
+    pass
+  
+try:
+    n4 = extract(X, 5, 1, s=1)
+    print('This test should have thrown an error - sub-array does not fit with bottom border.')
+except:
+    pass
+
 # Question 2.4 - check visually against glider example
 
-X = np.array([[0, 0, 0, 0], [1, 0, 0, 0], [0, 1, 1, 0], [1, 1, 0, 0], [0, 0, 0, 0]])
+X = np.array([[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 1, 1, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
 
-# Question 2.5 - NEEDS UPDATING
+# Question 2.5 - check against q2_5.png
 
-# X_test = np.array([[0, 0, 1, 1, 0],[0, 0, 0, 0, 0],[0, 1, 1, 1, 0],[0, 0, 0, 1, 1],[0, 0, 0, 0, 0]])
-# X=conway_game(X_test, 15)
+X_test = np.array([[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 1, 1, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
+X=conway_game(X_test, 9)
 
 ### PART 3
 
