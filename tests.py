@@ -125,6 +125,6 @@ assert smooth_df.iloc[-2] == 2.469826635724209, "Wrong smoothed value, should be
 date_range = pd.date_range(start='1/1/2018', periods = 20)
 s = pd.Series(np.sin(np.arange(0, 20, 1)), index = date_range)
 intervals = find_intervals(s, 0)
-assert np.array_equal(intervals.values, [3, 3, 2, 2])
+assert np.array_equal(intervals.values, [3, 3, 3, 1])
 
 
