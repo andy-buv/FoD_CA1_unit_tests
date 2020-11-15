@@ -1,4 +1,5 @@
 ### PART 1
+file_name = 'steak-risk-survey_clean.csv'
 
 df = pd.read_csv(file_name, index_col='RespondentID')
 # Question 1.1
